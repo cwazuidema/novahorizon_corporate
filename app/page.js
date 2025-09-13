@@ -57,6 +57,18 @@ export default function HomePage() {
 
             <section className="py-10 bg-[#FAFAFA]">
                 <Container>
+                    <div className="mb-6">
+                        <h2 className="text-2xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Leer meer over de 4 niveaus van AI-automatisering</h2>
+                        <p className="text-slate-600">Interactief overzicht.</p>
+                    </div>
+                    <div className="rounded-2xl border border-[#E6E6E6] bg-white p-4 sm:p-6">
+                        <LevelsStepper />
+                    </div>
+                </Container>
+            </section>
+
+            <section className="py-10 bg-[#FAFAFA]">
+                <Container>
                     <div className="mb-6 flex items-end justify-between">
                         <div>
                             <h2 className="text-2xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Use‑cases</h2>
@@ -78,23 +90,14 @@ export default function HomePage() {
                 </Container>
             </section>
 
-            <section className="py-10 bg-[#FAFAFA]">
+            {/* <section className="py-10 bg-[#FAFAFA]">
                 <Container>
                     <div className="flex justify-center px-[10%]">
-                        <img src="/img/pyramid_annotated.svg" alt="Niveaus piramide" className="w-full h-auto" />
+                        <img src="/img/pyramid_annotated_alt2.svg" alt="Niveaus piramide" className="w-full h-auto" />
                     </div>
                 </Container>
-            </section>
+            </section> */}
 
-            <section className="py-10 bg-[#FAFAFA]">
-                <Container>
-                    <div className="mb-6">
-                        <h2 className="text-2xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Niveaus (Stepper)</h2>
-                        <p className="text-slate-600">Doorloop de niveaus stap‑voor‑stap.</p>
-                    </div>
-                    <LevelsStepper />
-                </Container>
-            </section>
 
             <section className="py-10 bg-[#FAFAFA]">
                 <Container>
