@@ -9,6 +9,7 @@ import AbstractBackdrop from '../components/AbstractBackdrop';
 import StatsStrip from '../components/StatsStrip';
 import ModelBadge from '../components/ModelBadge';
 import LogoMarquee from '../components/LogoMarquee';
+import LevelsStepper from '../components/LevelsStepper';
 import { BoltIcon, ScaleIcon, ShieldCheckIcon, ChartBarIcon, MapIcon, LockClosedIcon, LockOpenIcon } from '../components/icons';
 
 export default function HomePage() {
@@ -74,6 +75,24 @@ export default function HomePage() {
             <section className="py-10">
                 <Container>
                     <LogoMarquee />
+                </Container>
+            </section>
+
+            <section className="py-10 bg-[#FAFAFA]">
+                <Container>
+                    <div className="flex justify-center px-[10%]">
+                        <img src="/img/pyramid_annotated.svg" alt="Niveaus piramide" className="w-full h-auto" />
+                    </div>
+                </Container>
+            </section>
+
+            <section className="py-10 bg-[#FAFAFA]">
+                <Container>
+                    <div className="mb-6">
+                        <h2 className="text-2xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Niveaus (Stepper)</h2>
+                        <p className="text-slate-600">Doorloop de niveaus stap‑voor‑stap.</p>
+                    </div>
+                    <LevelsStepper />
                 </Container>
             </section>
 
