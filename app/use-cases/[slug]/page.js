@@ -34,7 +34,7 @@ export default function UseCasePage({ params }) {
                             </Card>
                         </div>
                         <div className="mt-8 flex gap-3">
-                            <Button href="mailto:info@novahorizon.nl">Plan intake</Button>
+                            <Button href="mailto:info@novahorizon.nl">Plan adviesgesprek</Button>
                             <Button variant="outline" href="#">Download 1‑pager</Button>
                         </div>
                     </section>

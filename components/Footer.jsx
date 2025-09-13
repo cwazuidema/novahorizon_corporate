@@ -29,7 +29,7 @@ export default function Footer() {
                 <div>
                     <div className="mb-2 font-semibold text-[#0B1C2C]">Contact</div>
                     <p className="text-slate-600">info@novahorizon.nl<br />+31 (0)70 000 0000</p>
-                    <div className="mt-3"><Button href="mailto:info@novahorizon.nl">Plan intake</Button></div>
+                    <div className="mt-3"><Button href="mailto:info@novahorizon.nl">Plan adviesgesprek</Button></div>
                 </div>
             </Container>
         </footer>

@@ -39,7 +39,7 @@ export default function ArticlePage({ params }) {
                         })}
                     </div>
                     <div className="mt-8 flex items-center gap-3">
-                        <Button href="mailto:info@novahorizon.nl">Plan intake</Button>
+                        <Button href="mailto:info@novahorizon.nl">Plan adviesgesprek</Button>
                         <Button variant="outline" href="#">Deel artikel</Button>
                     </div>
                 </article>

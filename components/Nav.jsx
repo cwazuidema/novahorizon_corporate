@@ -17,7 +17,6 @@ export default function Nav() {
         <header className="sticky top-0 z-50 border-b border-[#E6E6E6] bg-white/80 backdrop-blur">
             <Container className="flex h-16 items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-hadfield_blue to-graphite" />
                     <span className="font-semibold tracking-wide" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Nova Horizon</span>
                 </div>
                 <nav className="hidden items-center gap-6 md:flex">
@@ -34,8 +33,7 @@ export default function Nav() {
                     })}
                 </nav>
                 <div className="flex items-center gap-3">
-                    <Button href="/use-cases" className="hidden md:inline-flex">Bekijk use-cases</Button>
-                    <Button variant="outline" href="mailto:info@novahorizon.nl">Plan intake</Button>
+                    <Button href="mailto:info@novahorizon.nl">Plan adviesgesprek</Button>
                 </div>
             </Container>
         </header>

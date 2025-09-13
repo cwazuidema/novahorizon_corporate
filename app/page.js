@@ -1,6 +1,10 @@
 import Container from '../components/Container';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import ArticleCard from '../components/ArticleCard';
+import { articleList } from '../data/articles';
+import UseCaseCard from '../components/UseCaseCard';
+import { useCaseList } from '../data/useCases';
 import AbstractBackdrop from '../components/AbstractBackdrop';
 import StatsStrip from '../components/StatsStrip';
 import ModelBadge from '../components/ModelBadge';
@@ -17,14 +21,15 @@ export default function HomePage() {
                         AI in jouw bedrijf binnen 4 weken met meetbaar resultaat of je betaalt niets.
                     </h1>
                     <div className="md:col-span-2">
-                        <p className="mb-6 w-full text-center text-slate-700 lg:w-1/2 mx-auto">
+                        {/* <p className="mb-6 w-full text-center text-slate-700 lg:w-1/2 mx-auto">
                             Roadmap, implementatie en borging door een <strong>AI Automation Engineer & Software Developer</strong> team—zonder vendor lock‑in. Transparant tarief, duidelijke KPI’s, elke sprint tastbare waarde.
-                        </p>
-                        <div className="flex w-full flex-wrap justify-center gap-3">
-                            <Button href="mailto:info@novahorizon.nl">Plan adviesgesprek</Button>
-                            <Button variant="ghost" href="/use-cases">Bekijk use‑cases</Button>
+                        </p> */}
+                        <div className="flex w-full flex-col items-center gap-6">
+                            <Button href="mailto:info@novahorizon.nl" className="text-base md:text-lg font-semibold px-6 py-3 rounded-3xl">
+                                Plan adviesgesprek
+                            </Button>
+                            <Button variant="outline" href="/use-cases">Bekijk use‑cases</Button>
                         </div>
-                        {/* <div className="mt-6 max-w-lg"><StatsStrip /></div> */}
                     </div>
                 </Container>
             </section>
@@ -49,12 +54,55 @@ export default function HomePage() {
                 </Container>
             </section>
 
+            <section className="py-10 bg-[#FAFAFA]">
+                <Container>
+                    <div className="mb-6 flex items-end justify-between">
+                        <div>
+                            <h2 className="text-2xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Use‑cases</h2>
+                            <p className="text-slate-600">Concrete voorbeelden van impact en snelle payback.</p>
+                        </div>
+                        <Button variant="outline" href="/use-cases">Bekijk alle</Button>
+                    </div>
+                    <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+                        {useCaseList.slice(0, 3).map((u) => (
+                            <UseCaseCard key={u.slug} useCase={u} />
+                        ))}
+                    </div>
+                </Container>
+            </section>
+
+            <section className="py-10">
+                <Container>
+                    <LogoMarquee />
+                </Container>
+            </section>
+
+            <section className="py-10 bg-[#FAFAFA]">
+                <Container>
+                    <div className="mb-6 flex items-end justify-between">
+                        <div>
+                            <h2 className="text-2xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Artikelen</h2>
+                            <p className="text-slate-600">Nieuws & updates (MDX-ready). Filters: categorie • sector • datum.</p>
+                        </div>
+                        <Button variant="outline" href="/artikelen">Bekijk alle</Button>
+                    </div>
+                    <div className="grid gap-6 md:grid-cols-3">
+                        {articleList.slice(0, 3).map((a) => (
+                            <ArticleCard key={a.slug} article={a} />
+                        ))}
+                    </div>
+                </Container>
+            </section>
+
+
+
+
+            {/* 
             <section className="py-10">
                 <Container>
                     <div className="space-y-4">
                         <Card className="p-4">
                             <div className="flex items-center gap-3">
-                                {/* <div className="h-10 w-10 rounded-xl bg-[#0B1C2C] text-white grid place-items-center">TEAM</div> */}
                                 <div className="text-sm">
                                     <div className="font-semibold text-[#0B1C2C]">AI Automation Engineer & Software Developer</div>
                                     <div className="text-slate-600">Verschillende disciplines in één team</div>
@@ -88,14 +136,7 @@ export default function HomePage() {
                         </Card>
                     </div>
                 </Container>
-            </section>
-
-
-            <section className="py-10">
-                <Container>
-                    <LogoMarquee />
-                </Container>
-            </section>
+            </section> */}
 
 
         </main>
