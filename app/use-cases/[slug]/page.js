@@ -18,14 +18,27 @@ export default function UseCasePage({ params }) {
                     <section>
                         <h1 className="mb-2 text-3xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>{uc.name}</h1>
                         <p className="mb-6 text-slate-700 max-w-2xl">{uc.blurb}</p>
-                        <Card className="mb-6 h-48 bg-gradient-to-br from-[#0B1C2C]/10 to-hadfield_blue/10" />
+                        <Card className="mb-6 overflow-hidden">
+                            <div className="relative w-full" style={{ aspectRatio: '3.5 / 1' }}>
+                                {uc.image ? (
+                                    <img
+                                        src={uc.image}
+                                        alt=""
+                                        aria-hidden="true"
+                                        className="absolute inset-0 h-full w-full object-cover"
+                                    />
+                                ) : (
+                                    <div className="h-full w-full bg-gradient-to-br from-[#E6E6E6] to-white" />
+                                )}
+                            </div>
+                        </Card>
                         <div className="grid gap-6 md:grid-cols-3">
                             <Card className="p-5">
                                 <h4 className="font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Probleem</h4>
                                 <p className="text-sm text-slate-700">Beschrijf de huidige frictie (wachttijd, handwerk, fouten, compliance‑risico).</p>
                             </Card>
                             <Card className="p-5">
-                                <h4 className="font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Aanpak (AAE + Dev)</h4>
+                                <h4 className="font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Aanpak</h4>
                                 <p className="text-sm text-slate-700">Sprints, integraties (n8n/ERP), evaluatiekaders en guardrails. Documentatie en overdraagbaarheid.</p>
                             </Card>
                             <Card className="p-5">
