@@ -4,7 +4,18 @@ import Button from './Button';
 export default function UseCaseCard({ useCase, className = '' }) {
     return (
         <Card className={["flex flex-col", className].filter(Boolean).join(' ')}>
-            <div className="h-28 rounded-t-2xl bg-gradient-to-br from-[#E6E6E6] to-white" />
+            <div className="relative w-full rounded-t-2xl overflow-hidden" style={{ aspectRatio: '3.5 / 1' }}>
+                {useCase.image ? (
+                    <img
+                        src={useCase.image}
+                        alt=""
+                        aria-hidden="true"
+                        className="absolute inset-0 h-full w-full object-cover"
+                    />
+                ) : (
+                    <div className="h-full w-full bg-gradient-to-br from-[#E6E6E6] to-white" />
+                )}
+            </div>
             <div className="flex flex-1 flex-col p-5">
                 <h3 className="mb-2 font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>{useCase.name}</h3>
                 <p className="mb-3 text-sm text-slate-700">{useCase.blurb}</p>

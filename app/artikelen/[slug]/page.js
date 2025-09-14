@@ -22,7 +22,17 @@ export default function ArticlePage({ params }) {
                         {new Date(article.date).toLocaleDateString()} • {article.read} leestijd
                     </div>
                     <Card className="mb-6 overflow-hidden">
-                        <div className="h-48 bg-gradient-to-br from-[#0B1C2C]/10 to-hadfield_blue/10" />
+                        <div className="relative w-full" style={{ aspectRatio: '3.5 / 1' }}>
+                            {article.image ? (
+                                <img
+                                    src={article.image}
+                                    alt={article.title}
+                                    className="absolute inset-0 h-full w-full object-cover"
+                                />
+                            ) : (
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#0B1C2C]/10 to-hadfield_blue/10" />
+                            )}
+                        </div>
                     </Card>
                     <div className="prose prose-slate max-w-none">
                         {mdx.split('\n\n').map((block, i) => {

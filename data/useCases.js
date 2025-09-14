@@ -2,6 +2,7 @@ export const useCaseList = [
     {
         slug: 'cao-assistent',
         name: 'CAO Assistent',
+        image: '/img/cao.png',
         outcome: ['-40% afhandeltijd', '+20% NPS'],
         blurb: 'Vragen over CAO/HR automatisch beantwoorden met traceerbare bronnen.',
     },

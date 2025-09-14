@@ -2,6 +2,7 @@ export const articleList = [
     {
         slug: 'roi-van-ai-6-12-weken',
         title: 'De ROI van AI in 6–12 weken: van pilot naar product',
+        image: '/img/cao.png',
         teaser: 'Een pragmatische route naar meetbare resultaten zonder vendor lock-in.',
         date: '2025-08-31',
         read: '6 min',

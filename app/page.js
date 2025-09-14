@@ -74,7 +74,7 @@ export default function HomePage() {
                             <h2 className="text-2xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Use‑cases</h2>
                             <p className="text-slate-600">Concrete voorbeelden van impact en snelle payback.</p>
                         </div>
-                        <Button variant="outline" href="/use-cases">Bekijk alle</Button>
+                        <Button variant="outline" href="/use-cases" className="whitespace-nowrap shrink-0">Bekijk alle</Button>
                     </div>
                     <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
                         {useCaseList.slice(0, 3).map((u) => (
@@ -106,7 +106,7 @@ export default function HomePage() {
                             <h2 className="text-2xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Artikelen</h2>
                             <p className="text-slate-600">Nieuws & updates (MDX-ready). Filters: categorie • sector • datum.</p>
                         </div>
-                        <Button variant="outline" href="/artikelen">Bekijk alle</Button>
+                        <Button variant="outline" href="/artikelen" className="whitespace-nowrap shrink-0">Bekijk alle</Button>
                     </div>
                     <div className="grid gap-6 md:grid-cols-3">
                         {articleList.slice(0, 3).map((a) => (
