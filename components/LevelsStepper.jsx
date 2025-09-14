@@ -26,7 +26,7 @@ export default function LevelsStepper({ className = '' }) {
                                 <button
                                     type="button"
                                     onClick={() => setActiveIndex(idx)}
-                                    className={`flex items-center justify-center rounded-full border-2 text-xs transition-colors ${isActive ? 'border-hadfield_blue bg-hadfield_blue text-white' : 'border-[#E6E6E6] bg-white text-[#0B1C2C]'}`}
+                                    className={`flex items-center justify-center rounded-full border-2 text-xs transition-colors ${isActive ? 'border-cta bg-cta text-white' : 'border-secondary bg-white text-primary'}`}
                                     style={{ width: 'clamp(44px, 14vw, 64px)', height: 'clamp(44px, 14vw, 64px)', fontSize: 'clamp(12px, 3.2vw, 16px)' }}
                                     aria-label={m.title}
                                 >
@@ -49,7 +49,7 @@ export default function LevelsStepper({ className = '' }) {
                             key={m.key}
                             type="button"
                             onClick={() => setActiveIndex(idx)}
-                            className={`rounded-xl border px-3 py-2 text-sm font-semibold transition-colors ${idx === activeIndex ? 'border-hadfield_blue bg-hadfield_blue text-white' : 'border-[#E6E6E6] bg-white text-[#0B1C2C] hover:border-hadfield_blue'}`}
+                            className={`rounded-xl border px-3 py-2 text-sm font-semibold transition-colors ${idx === activeIndex ? 'border-cta bg-cta text-white' : 'border-secondary bg-white text-primary hover:border-cta'}`}
                             aria-label={`${m.title}`}
                         >
                             {right ? (
@@ -66,10 +66,10 @@ export default function LevelsStepper({ className = '' }) {
                 })}
             </div>
 
-            <div className="rounded-2xl border border-[#E6E6E6] bg-white p-6">
+            <div className="rounded-2xl border border-secondary bg-white p-6">
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:gap-6">
                     <div className="w-full md:w-1/2">
-                        <div className="text-lg font-semibold text-[#0B1C2C] md:text-xl" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>{meta.title}</div>
+                        <div className="text-lg font-semibold text-primary md:text-xl" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>{meta.title}</div>
                         <p className="mt-2 text-slate-700">{meta.description}</p>
                         <div className="mt-3 flex flex-col items-start gap-2">
                             {meta.badges.map((b) => (
@@ -80,17 +80,17 @@ export default function LevelsStepper({ className = '' }) {
                     <div className="w-full md:w-1/2">
                         <div className="mb-2 flex items-center justify-between text-xs">
                             <span className="font-semibold text-slate-700">Mens</span>
-                            <span className="font-semibold text-[#0B1C2C]">{perc.human}%</span>
+                            <span className="font-semibold text-primary">{perc.human}%</span>
                         </div>
                         <div className="h-2 w-full overflow-hidden rounded-full bg-slate-200">
                             <div className="h-full bg-slate-500 transition-all duration-500" style={{ width: `${perc.human}%` }} />
                         </div>
                         <div className="mt-3 mb-2 flex items-center justify-between text-xs">
                             <span className="font-semibold text-slate-700">AI</span>
-                            <span className="font-semibold text-hadfield_blue">{perc.ai}%</span>
+                            <span className="font-semibold text-cta">{perc.ai}%</span>
                         </div>
                         <div className="h-2 w-full overflow-hidden rounded-full bg-slate-200">
-                            <div className="h-full bg-hadfield_blue transition-all duration-500" style={{ width: `${perc.ai}%` }} />
+                            <div className="h-full bg-cta transition-all duration-500" style={{ width: `${perc.ai}%` }} />
                         </div>
 
                     </div>

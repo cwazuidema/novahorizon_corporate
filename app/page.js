@@ -15,10 +15,10 @@ import { BoltIcon, ScaleIcon, ShieldCheckIcon, ChartBarIcon, MapIcon, LockClosed
 export default function HomePage() {
     return (
         <main>
-            <section className="relative isolate border-b border-[#E6E6E6] bg-[#FAFAFA] py-16">
+            <section className="relative isolate border-b border-secondary bg-background py-16">
                 <AbstractBackdrop />
                 <Container className="grid items-center gap-8 md:grid-cols-2">
-                    <h1 className="mb-4 text-5xl font-semibold leading-tight text-center md:col-span-2 md:text-8xl bg-clip-text text-transparent bg-gradient-to-br from-hadfield_blue to-hadfield_blue" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>
+                    <h1 className="mb-4 text-5xl font-semibold leading-tight text-center md:col-span-2 md:text-8xl bg-clip-text text-transparent bg-gradient-to-br from-cta to-cta" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>
                         AI in jouw bedrijf binnen 4 weken met meetbaar resultaat of je betaalt niets.
                     </h1>
                     <div className="md:col-span-2">
@@ -38,40 +38,40 @@ export default function HomePage() {
             <section className="py-10">
                 <Container className="grid gap-6 md:grid-cols-3">
                     <Card className="p-6">
-                        <MapIcon className="h-6 w-6 text-hadfield_blue" />
-                        <h3 className="mt-3 font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Duidelijke Roadmap</h3>
+                        <MapIcon className="h-6 w-6 text-cta" />
+                        <h3 className="mt-3 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Duidelijke Roadmap</h3>
                         <p className="text-sm text-slate-700">Met een duidelijke planning houden we de voortgang scherp in de gaten.</p>
                     </Card>
                     <Card className="p-6">
-                        <LockClosedIcon className="h-6 w-6 text-hadfield_blue" />
-                        <h3 className="mt-3 font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Geen vendor lock‑in</h3>
+                        <LockClosedIcon className="h-6 w-6 text-cta" />
+                        <h3 className="mt-3 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Geen vendor lock‑in</h3>
                         <p className="text-sm text-slate-700">Open standaarden, portable configuraties, en overdraagbare code.</p>
                     </Card>
                     <Card className="p-6">
-                        <ShieldCheckIcon className="h-6 w-6 text-hadfield_blue" />
-                        <h3 className="mt-3 font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Privacy by design</h3>
+                        <ShieldCheckIcon className="h-6 w-6 text-cta" />
+                        <h3 className="mt-3 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Privacy by design</h3>
                         <p className="text-sm text-slate-700">Datalocatie, encryptie en toegangsbeheer geregeld vanaf dag één.</p>
                     </Card>
                 </Container>
             </section>
 
-            <section className="py-10 bg-[#FAFAFA]">
+            <section className="py-10 bg-background">
                 <Container>
                     <div className="mb-6">
-                        <h2 className="text-2xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Leer meer over de 4 niveaus van AI-automatisering</h2>
+                        <h2 className="text-2xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Leer meer over de 4 niveaus van AI-automatisering</h2>
                         <p className="text-slate-600">Interactief overzicht.</p>
                     </div>
-                    <div className="rounded-2xl border border-[#E6E6E6] bg-white p-4 sm:p-6">
+                    <div className="rounded-2xl border border-secondary bg-white p-4 sm:p-6">
                         <LevelsStepper />
                     </div>
                 </Container>
             </section>
 
-            <section className="py-10 bg-[#FAFAFA]">
+            <section className="py-10 bg-background">
                 <Container>
                     <div className="mb-6 flex items-end justify-between">
                         <div>
-                            <h2 className="text-2xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Use‑cases</h2>
+                            <h2 className="text-2xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Use‑cases</h2>
                             <p className="text-slate-600">Concrete voorbeelden van impact en snelle payback.</p>
                         </div>
                         <Button variant="outline" href="/use-cases" className="whitespace-nowrap shrink-0">Bekijk alle</Button>
@@ -90,7 +90,7 @@ export default function HomePage() {
                 </Container>
             </section>
 
-            {/* <section className="py-10 bg-[#FAFAFA]">
+            {/* <section className="py-10 bg-background">
                 <Container>
                     <div className="flex justify-center px-[10%]">
                         <img src="/img/pyramid_annotated_alt2.svg" alt="Niveaus piramide" className="w-full h-auto" />
@@ -99,11 +99,11 @@ export default function HomePage() {
             </section> */}
 
 
-            <section className="py-10 bg-[#FAFAFA]">
+            <section className="py-10 bg-background">
                 <Container>
                     <div className="mb-6 flex items-end justify-between">
                         <div>
-                            <h2 className="text-2xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Artikelen</h2>
+                            <h2 className="text-2xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Artikelen</h2>
                             <p className="text-slate-600">Nieuws & updates (MDX-ready). Filters: categorie • sector • datum.</p>
                         </div>
                         <Button variant="outline" href="/artikelen" className="whitespace-nowrap shrink-0">Bekijk alle</Button>
@@ -126,23 +126,23 @@ export default function HomePage() {
                         <Card className="p-4">
                             <div className="flex items-center gap-3">
                                 <div className="text-sm">
-                                    <div className="font-semibold text-[#0B1C2C]">AI Automation Engineer & Software Developer</div>
+                                    <div className="font-semibold text-primary">AI Automation Engineer & Software Developer</div>
                                     <div className="text-slate-600">Verschillende disciplines in één team</div>
                                 </div>
                             </div>
                         </Card>
                         <Card className="p-4">
                             <div className="flex items-center gap-3">
-                                <div className="h-10 w-10 rounded-xl bg-[#0B1C2C] text-white grid place-items-center">AA</div>
+                                <div className="h-10 w-10 rounded-xl bg-primary text-white grid place-items-center">AA</div>
                                 <div className="text-sm">
-                                    <div className="font-semibold text-[#0B1C2C]">Geen vendor lock‑in</div>
+                                    <div className="font-semibold text-primary">Geen vendor lock‑in</div>
                                     <div className="text-slate-600">Open standaarden, portable configuraties, en overdraagbare code.</div>
                                 </div>
                             </div>
                         </Card>
                         <Card className="p-4">
                             <div className="flex items-start gap-3">
-                                <ChartBarIcon className="mt-0.5 h-5 w-5 text-hadfield_blue" />
+                                <ChartBarIcon className="mt-0.5 h-5 w-5 text-cta" />
                                 <div className="text-sm text-slate-700">
                                     <strong>ROI‑strip</strong> met concrete KPI’s en payback‑berekening. Geen black box; we leveren metrics per fase.
                                 </div>
@@ -150,7 +150,7 @@ export default function HomePage() {
                         </Card>
                         <Card className="p-4">
                             <div className="flex items-start gap-3">
-                                <ShieldCheckIcon className="mt-0.5 h-5 w-5 text-[#3A3F47]" />
+                                <ShieldCheckIcon className="mt-0.5 h-5 w-5 text-tertiary" />
                                 <div className="text-sm text-slate-700">
                                     <strong>AVG & EU AI Act</strong> verwerkt in aanpak: dataminimalisatie, explainability, en documentatie out‑of‑the‑box.
                                 </div>

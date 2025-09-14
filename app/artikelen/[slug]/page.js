@@ -17,7 +17,7 @@ export default function ArticlePage({ params }) {
         <main className="py-10">
             <Container className="grid gap-10 md:grid-cols-[1fr_280px]">
                 <article>
-                    <h1 className="mb-2 text-3xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>{article.title}</h1>
+                    <h1 className="mb-2 text-3xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>{article.title}</h1>
                     <div className="mb-6 text-sm text-slate-500">
                         {new Date(article.date).toLocaleDateString()} • {article.read} leestijd
                     </div>
@@ -30,7 +30,7 @@ export default function ArticlePage({ params }) {
                                     className="absolute inset-0 h-full w-full object-cover"
                                 />
                             ) : (
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#0B1C2C]/10 to-hadfield_blue/10" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-cta/10" />
                             )}
                         </div>
                     </Card>
@@ -55,7 +55,7 @@ export default function ArticlePage({ params }) {
                 </article>
                 <aside className="space-y-4">
                     <Card className="p-4">
-                        <h4 className="mb-2 font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>In dit artikel</h4>
+                        <h4 className="mb-2 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>In dit artikel</h4>
                         <ul className="list-disc pl-5 text-sm text-slate-700">
                             <li>Inleiding</li>
                             <li>Kernpunten</li>
@@ -63,10 +63,10 @@ export default function ArticlePage({ params }) {
                         </ul>
                     </Card>
                     <Card className="p-4">
-                        <h4 className="mb-2 font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Gerelateerd</h4>
+                        <h4 className="mb-2 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Gerelateerd</h4>
                         <ul className="space-y-2 text-sm">
                             {articleList.slice(0, 2).map((a) => (
-                                <li key={a.slug} className="text-[#0B1C2C] underline decoration-[#E6E6E6] underline-offset-[3px]">{a.title}</li>
+                                <li key={a.slug} className="text-primary underline decoration-secondary underline-offset-[3px]">{a.title}</li>
                             ))}
                         </ul>
                     </Card>

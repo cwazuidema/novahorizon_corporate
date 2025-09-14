@@ -28,7 +28,7 @@ export default function Nav() {
 
     return (
         <>
-            <header className="fixed top-0 inset-x-0 z-50 border-b border-[#E6E6E6] bg-white">
+            <header className="fixed top-0 inset-x-0 z-50 border-b border-secondary bg-white">
                 <Container className="relative flex h-16 items-center justify-between">
                     <div className="flex items-center gap-3">
                         <Link href="/" className="font-bold text-lg md:text-xl tracking-wide" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>
@@ -44,7 +44,7 @@ export default function Nav() {
                             return (
                                 <Link key={it.href} href={it.href} className={[
                                     'text-base font-semibold transition',
-                                    active ? 'text-[#0B1C2C]' : 'text-slate-600 hover:text-[#0B1C2C]'
+                                    active ? 'text-primary' : 'text-slate-600 hover:text-primary'
                                 ].join(' ')}>
                                     {it.label}
                                 </Link>
@@ -109,7 +109,7 @@ export default function Nav() {
                                             onClick={() => setMenuOpen(false)}
                                             className={[
                                                 'block px-6 py-4 text-base font-semibold',
-                                                active ? 'text-[#0B1C2C]' : 'text-slate-700 hover:text-[#0B1C2C]'
+                                                active ? 'text-primary' : 'text-slate-700 hover:text-primary'
                                             ].join(' ')}
                                         >
                                             {it.label}

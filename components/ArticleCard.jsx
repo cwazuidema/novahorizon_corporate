@@ -13,12 +13,12 @@ export default function ArticleCard({ article, className = '' }) {
                         className="absolute inset-0 h-full w-full object-cover"
                     />
                 ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#E6E6E6] to-white" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-secondary to-white" />
                 )}
             </div>
             <div className="flex flex-1 flex-col p-5">
                 <div className="mb-1 text-xs text-slate-500">{new Date(article.date).toLocaleDateString()}</div>
-                <h3 className="mb-2 font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>{article.title}</h3>
+                <h3 className="mb-2 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>{article.title}</h3>
                 <p className="mb-3 line-clamp-3 text-sm text-slate-700">{article.teaser}</p>
                 <div className="mt-auto flex items-center justify-between">
                     <div className="text-xs text-slate-500">{article.read} leestijd</div>

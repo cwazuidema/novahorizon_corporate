@@ -7,7 +7,7 @@ export default function CookieBanner() {
     if (!visible) return null;
     return (
         <div className="fixed inset-x-0 bottom-3 z-50 mx-auto w-[min(100%,64rem)] px-4">
-            <div className="flex flex-col items-start gap-3 rounded-2xl border border-[#E6E6E6] bg-white p-4 shadow-lg md:flex-row md:items-center md:justify-between">
+            <div className="flex flex-col items-start gap-3 rounded-2xl border border-secondary bg-white p-4 shadow-lg md:flex-row md:items-center md:justify-between">
                 <p className="text-sm text-slate-700">
                     We gebruiken cookies voor functionaliteit en anonieme statistiek. Je kunt je voorkeuren aanpassen.
                 </p>

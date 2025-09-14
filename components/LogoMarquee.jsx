@@ -11,7 +11,7 @@ export default function LogoMarquee() {
     ];
 
     return (
-        <div className="relative overflow-hidden rounded-2xl border border-[#E6E6E6] bg-white py-6">
+        <div className="relative overflow-hidden rounded-2xl border border-secondary bg-white py-6">
             <div className="group flex min-w-max gap-28 whitespace-nowrap [animation:marquee_28s_linear_infinite] hover:[animation-play-state:paused]">
                 {[...logos, ...logos].map((logo, i) => (
                     <div key={i} className="flex items-center opacity-70 transition hover:opacity-100 shrink-0">

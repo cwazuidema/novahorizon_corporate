@@ -7,11 +7,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                navy: '#0B1C2C',
-                platinum: '#E6E6E6',
-                graphite: '#3A3F47',
-                paper: '#FAFAFA',
-                hadfield_blue: '#1177FF',
+                primary: '#0B1C2C',
+                secondary: '#E6E6E6',
+                tertiary: '#3A3F47',
+                backgroud: '#FAFAFA',
+                cta: '#1177FF',
             },
         },
     },

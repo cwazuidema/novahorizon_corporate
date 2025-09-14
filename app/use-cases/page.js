@@ -6,9 +6,9 @@ export const metadata = { title: 'Use‑cases — Nova Horizon' };
 
 export default function UseCasesOverviewPage() {
     return (
-        <main className="bg-[#FAFAFA] py-12">
+        <main className="bg-background py-12">
             <Container>
-                <h2 className="mb-2 text-2xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Use‑cases</h2>
+                <h2 className="mb-2 text-2xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Use‑cases</h2>
                 <p className="mb-6 text-slate-600">Sectorfilter en uitkomst‑tags. Klik voor detail.</p>
                 <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
                     {useCaseList.map((u) => (

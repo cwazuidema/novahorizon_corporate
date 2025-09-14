@@ -16,9 +16,9 @@ export default function UseCasePage({ params }) {
             <Container>
                 <div className="grid gap-10 md:grid-cols-[1fr_320px]">
                     <section>
-                        <h1 className="mb-2 text-3xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>{uc.name}</h1>
+                        <h1 className="mb-2 text-3xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>{uc.name}</h1>
                         <p className="mb-6 text-slate-700 max-w-2xl">{uc.blurb}</p>
-                            <Card className="mb-6 overflow-hidden">
+                        <Card className="mb-6 overflow-hidden">
                             <div className="relative w-full" style={{ aspectRatio: '3.5 / 1' }}>
                                 {uc.image ? (
                                     <img
@@ -28,21 +28,21 @@ export default function UseCasePage({ params }) {
                                         className="absolute inset-0 h-full w-full object-cover"
                                     />
                                 ) : (
-                                    <div className="h-full w-full bg-gradient-to-br from-[#E6E6E6] to-white" />
+                                    <div className="h-full w-full bg-gradient-to-br from-secondary to-white" />
                                 )}
                             </div>
                         </Card>
                         <div className="grid gap-6 md:grid-cols-3">
                             <Card className="p-5">
-                                <h4 className="font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Probleem</h4>
+                                <h4 className="font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Probleem</h4>
                                 <p className="text-sm text-slate-700">Beschrijf de huidige frictie (wachttijd, handwerk, fouten, compliance‑risico).</p>
                             </Card>
                             <Card className="p-5">
-                                <h4 className="font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Aanpak</h4>
+                                <h4 className="font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Aanpak</h4>
                                 <p className="text-sm text-slate-700">Sprints, integraties (n8n/ERP), evaluatiekaders en guardrails. Documentatie en overdraagbaarheid.</p>
                             </Card>
                             <Card className="p-5">
-                                <h4 className="font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Impact</h4>
+                                <h4 className="font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Impact</h4>
                                 <p className="text-sm text-slate-700">{uc.outcome.join(' · ')} — met KPI’s en payback‑schatting.</p>
                             </Card>
                         </div>
@@ -53,7 +53,7 @@ export default function UseCasePage({ params }) {
                     </section>
                     <aside className="space-y-4">
                         <Card className="p-4">
-                            <h4 className="mb-2 font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Stack</h4>
+                            <h4 className="mb-2 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Stack</h4>
                             <ul className="list-disc pl-5 text-sm text-slate-700">
                                 <li>MDX content + Next.js</li>
                                 <li>n8n workflows</li>
@@ -62,7 +62,7 @@ export default function UseCasePage({ params }) {
                             </ul>
                         </Card>
                         <Card className="p-4">
-                            <h4 className="mb-2 font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Testimonial</h4>
+                            <h4 className="mb-2 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Testimonial</h4>
                             <p className="text-sm text-slate-700">“Binnen 8 weken zagen we –35% doorlooptijd en betere klanttevredenheid.”</p>
                         </Card>
                     </aside>
