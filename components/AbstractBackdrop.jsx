@@ -12,11 +12,11 @@ export default function AbstractBackdrop() {
             }} />
             <div className="absolute -left-24 top-40 h-80 w-[34rem] -rotate-6 rounded-[2rem]" style={{
                 background: 'linear-gradient(135deg, #3A3F47, #0B1C2C)',
-                opacity: 0.08,
+                opacity: 0.25,
             }} />
             <div
                 className="absolute right-10 bottom-0 h-56 w-56 rotate-6 rounded-2xl bg-[radial-gradient(circle_at_30%_30%,_theme(colors.hadfield_blue),_transparent_60%)]"
-                style={{ opacity: 0.08 }}
+                style={{ opacity: 0.2 }}
             />
         </div>
     );

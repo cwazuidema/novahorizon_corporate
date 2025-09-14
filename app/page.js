@@ -15,7 +15,7 @@ import { BoltIcon, ScaleIcon, ShieldCheckIcon, ChartBarIcon, MapIcon, LockClosed
 export default function HomePage() {
     return (
         <main>
-            <section className="relative border-b border-[#E6E6E6] bg-[#FAFAFA] py-16">
+            <section className="relative isolate border-b border-[#E6E6E6] bg-[#FAFAFA] py-16">
                 <AbstractBackdrop />
                 <Container className="grid items-center gap-8 md:grid-cols-2">
                     <h1 className="mb-4 text-5xl font-semibold leading-tight text-center md:col-span-2 md:text-8xl bg-clip-text text-transparent bg-gradient-to-br from-hadfield_blue to-hadfield_blue" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>
