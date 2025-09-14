@@ -18,7 +18,7 @@ export default function UseCasePage({ params }) {
                     <section>
                         <h1 className="mb-2 text-3xl font-semibold text-[#0B1C2C]" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>{uc.name}</h1>
                         <p className="mb-6 text-slate-700 max-w-2xl">{uc.blurb}</p>
-                        <Card className="mb-6 overflow-hidden">
+                            <Card className="mb-6 overflow-hidden">
                             <div className="relative w-full" style={{ aspectRatio: '3.5 / 1' }}>
                                 {uc.image ? (
                                     <img
