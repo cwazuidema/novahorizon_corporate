@@ -2,16 +2,19 @@ import Link from 'next/link';
 import Card from './Card';
 
 export default function UseCaseCard({ useCase, className = '' }) {
+    const videoEmbedUrl = useCase.videoUrl ? (useCase.videoUrl.includes('watch?v=') ? useCase.videoUrl.replace('watch?v=', 'embed/') : useCase.videoUrl) : null;
     return (
         <Link href={`/use-cases/${useCase.slug}`} className="block">
             <Card className={["flex flex-col cursor-pointer", className].filter(Boolean).join(' ')}>
-                <div className="relative w-full rounded-t-2xl overflow-hidden" style={{ aspectRatio: '3.5 / 1' }}>
-                    {useCase.image ? (
-                        <img
-                            src={useCase.image}
-                            alt=""
-                            aria-hidden="true"
-                            className="absolute inset-0 h-full w-full object-cover"
+                <div className="relative w-full rounded-t-2xl overflow-hidden" style={{ aspectRatio: '16 / 9' }}>
+                    {videoEmbedUrl ? (
+                        <iframe
+                            src={videoEmbedUrl}
+                            title="Use case video"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                            className="absolute inset-0 h-full w-full"
                         />
                     ) : (
                         <div className="h-full w-full bg-gradient-to-br from-secondary to-white" />

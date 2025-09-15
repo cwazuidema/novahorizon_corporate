@@ -1,7 +1,7 @@
 export const useCaseList = [
     {
         slug: 'personalised-lead-message',
-        name: 'Gepersonaliseerde bericht naar binnenkomende leads',
+        name: 'Van Email Lead naar Persoonlijke WhatsApp Bericht in 10 Seconden',
         image: '/img/nova_moving.png',
         videoUrl: 'https://www.youtube.com/watch?v=C4bRZondS1c',
         outcome: ['-40% afhandeltijd', '+20% NPS'],
@@ -12,6 +12,7 @@ export const useCaseList = [
         stack: ['n8n', 'LLM promptpijplijn', 'CRM API‑koppeling', 'Logging & evaluatie'],
         stackLogos: ['n8n', 'outlook', 'openai', 'whatsapp'],
         testimonial: '“Dit is precies wat we nodig hebben!”',
+        testimonialAuthor: 'David\nSenior Sales Executive\nInternationaal Verhuisbedrijf',
     },
     {
         slug: 'cao-assistent',
@@ -25,6 +26,7 @@ export const useCaseList = [
         stack: ['Document indexing (RAG)', 'Embeddings & vectorstore', 'LLM met citations', 'HRIS integratie', 'Auditlogging'],
         stackLogos: ['openai', 'claude', 'google-gemini', 'python', 'javascript', 'n8n'],
         testimonial: '“We besparen uren per week en kunnen antwoorden nu onderbouwen.”',
+        testimonialAuthor: 'Anonieme klant',
     },
     {
         slug: 'groot-pdf-naar-rapport',
@@ -37,6 +39,7 @@ export const useCaseList = [
         stack: ['PDF parsing', 'Section chunking', 'LLM summarization', 'Word/Google Docs export', 'Review UI'],
         stackLogos: ['python', 'openai', 'google-gemini', 'claude', 'javascript', 'n8n'],
         testimonial: '“Het rapport staat nu in uren in plaats van dagen.”',
+        testimonialAuthor: 'Anonieme klant',
     },
     {
         slug: 'inkomende-opdrachten-automatisch',
@@ -49,6 +52,7 @@ export const useCaseList = [
         stack: ['Channel connectors', 'NER/extractie', 'n8n orkestratie', 'ERP/CRM API', 'Monitoring & retry'],
         stackLogos: ['n8n', 'openai', 'javascript', 'python', 'google-gemini', 'claude'],
         testimonial: '“Automatisch boeken werkt verrassend goed — operators focussen op uitzonderingen.”',
+        testimonialAuthor: 'Anonieme klant',
     },
     {
         slug: 'n8n-integraties',
@@ -61,6 +65,7 @@ export const useCaseList = [
         stack: ['n8n', 'REST/GraphQL', 'Webhooks & queues', 'Secrets & env management', 'Observability'],
         stackLogos: ['n8n', 'javascript', 'python', 'openai', 'google-gemini', 'claude'],
         testimonial: '“We kunnen nu zelf eenvoudig koppelingen aanpassen.”',
+        testimonialAuthor: 'Anonieme klant',
     },
 ];
 
