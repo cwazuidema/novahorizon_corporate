@@ -11,6 +11,7 @@ export async function generateStaticParams() {
 export default function UseCasePage({ params }) {
     const uc = getUseCaseBySlug(params.slug);
     if (!uc) return notFound();
+    const videoEmbedUrl = uc.videoUrl ? (uc.videoUrl.includes('watch?v=') ? uc.videoUrl.replace('watch?v=', 'embed/') : uc.videoUrl) : null;
     return (
         <main className="py-10">
             <Container>
@@ -38,7 +39,7 @@ export default function UseCasePage({ params }) {
                                 <p className="text-sm text-slate-700">{uc.problem || 'Beschrijf de huidige frictie (wachttijd, handwerk, fouten, compliance‑risico).'}</p>
                             </Card>
                             <Card className="p-5">
-                                <h4 className="font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Aanpak</h4>
+                                <h4 className="font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Oplossing</h4>
                                 <p className="text-sm text-slate-700">{uc.approach || 'Sprints, integraties (n8n/ERP), evaluatiekaders en guardrails. Documentatie en overdraagbaarheid.'}</p>
                             </Card>
                             <Card className="p-5">
@@ -50,10 +51,24 @@ export default function UseCasePage({ params }) {
                             <Button href="mailto:info@novahorizon.nl">Plan adviesgesprek</Button>
                             <Button variant="outline" href="#">Download 1‑pager</Button>
                         </div>
+                        {videoEmbedUrl && (
+                            <Card className="mt-8 overflow-hidden">
+                                <div className="relative w-full" style={{ aspectRatio: '16 / 9' }}>
+                                    <iframe
+                                        src={videoEmbedUrl}
+                                        title="YouTube video player"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowFullScreen
+                                        className="absolute inset-0 h-full w-full"
+                                    />
+                                </div>
+                            </Card>
+                        )}
                     </section>
                     <aside className="space-y-4">
                         <Card className="p-4">
-                            <h4 className="mb-2 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Stack</h4>
+                            <h4 className="mb-2 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Gebruikte tools</h4>
                             {uc.stackLogos && uc.stackLogos.length > 0 ? (
                                 <div className="flex flex-wrap items-center gap-3">
                                     {uc.stackLogos.slice(0, 6).map((name, idx) => (

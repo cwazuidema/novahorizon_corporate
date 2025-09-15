@@ -1,16 +1,17 @@
 export const useCaseList = [
     {
         slug: 'personalised-lead-message',
-        name: 'Gepersonaliseerde bericht naar binnenkomende leads   ',
+        name: 'Gepersonaliseerde bericht naar binnenkomende leads',
         image: '/img/nova_moving.png',
+        videoUrl: 'https://www.youtube.com/watch?v=C4bRZondS1c',
         outcome: ['-40% afhandeltijd', '+20% NPS'],
-        blurb: 'Leads oppakken kost tijd, een persoonlijke reactie schrijven nog meer. Laten we dit automatiseren!',
+        blurb: 'Leads oppakken kost tijd, een persoonlijke reactie schrijven nog meer. Laat de AI voor ons werken!',
         problem: 'Leads blijven te lang liggen of krijgen generieke antwoorden waardoor conversie en NPS dalen.',
-        approach: 'Segmenteren per persona en intent, dynamische sjablonen en A/B‑testen. Integratie met CRM en e‑mail/WhatsApp.',
+        approach: 'Workflow gebouwd in n8n. Van binnenkomende lead naar persoonlijke reactie in 10 seconden.',
         impact: 'Snellere opvolging, hogere conversie op eerste reactie en consistenter merkgeluid.',
-        stack: ['Next.js landingsflow', 'LLM promptpijplijn', 'n8n routering', 'CRM API‑koppeling', 'Logging & evaluatie'],
-        stackLogos: ['openai', 'google-gemini', 'claude', 'n8n', 'javascript', 'python'],
-        testimonial: '“Onze eerste reactie is nu binnen minuten relevant en persoonlijk.”',
+        stack: ['n8n', 'LLM promptpijplijn', 'CRM API‑koppeling', 'Logging & evaluatie'],
+        stackLogos: ['n8n', 'outlook', 'openai', 'whatsapp'],
+        testimonial: '“Dit is precies wat we nodig hebben!”',
     },
     {
         slug: 'cao-assistent',
