@@ -35,15 +35,15 @@ export default function UseCasePage({ params }) {
                         <div className="grid gap-6 md:grid-cols-3">
                             <Card className="p-5">
                                 <h4 className="font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Probleem</h4>
-                                <p className="text-sm text-slate-700">Beschrijf de huidige frictie (wachttijd, handwerk, fouten, compliance‑risico).</p>
+                                <p className="text-sm text-slate-700">{uc.problem || 'Beschrijf de huidige frictie (wachttijd, handwerk, fouten, compliance‑risico).'}</p>
                             </Card>
                             <Card className="p-5">
                                 <h4 className="font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Aanpak</h4>
-                                <p className="text-sm text-slate-700">Sprints, integraties (n8n/ERP), evaluatiekaders en guardrails. Documentatie en overdraagbaarheid.</p>
+                                <p className="text-sm text-slate-700">{uc.approach || 'Sprints, integraties (n8n/ERP), evaluatiekaders en guardrails. Documentatie en overdraagbaarheid.'}</p>
                             </Card>
                             <Card className="p-5">
                                 <h4 className="font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Impact</h4>
-                                <p className="text-sm text-slate-700">{uc.outcome.join(' · ')} — met KPI’s en payback‑schatting.</p>
+                                <p className="text-sm text-slate-700">{uc.impact || `${uc.outcome?.join(' · ')} — met KPI’s en payback‑schatting.`}</p>
                             </Card>
                         </div>
                         <div className="mt-8 flex gap-3">
@@ -54,16 +54,30 @@ export default function UseCasePage({ params }) {
                     <aside className="space-y-4">
                         <Card className="p-4">
                             <h4 className="mb-2 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Stack</h4>
-                            <ul className="list-disc pl-5 text-sm text-slate-700">
-                                <li>MDX content + Next.js</li>
-                                <li>n8n workflows</li>
-                                <li>ERP/CRM koppelvlak</li>
-                                <li>Evaluatie & logging</li>
-                            </ul>
+                            {uc.stackLogos && uc.stackLogos.length > 0 ? (
+                                <div className="flex flex-wrap items-center gap-3">
+                                    {uc.stackLogos.slice(0, 6).map((name, idx) => (
+                                        <div key={idx} className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 bg-white p-1 shadow-sm">
+                                            <img
+                                                src={`/logos/${name}.svg`}
+                                                alt={`${name} logo`}
+                                                className="h-full w-full object-contain"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            ) : (
+                                <ul className="list-disc pl-5 text-sm text-slate-700">
+                                    {(uc.stack || ['MDX content + Next.js', 'n8n workflows', 'ERP/CRM koppelvlak', 'Evaluatie & logging']).map((item, idx) => (
+                                        <li key={idx}>{item}</li>
+                                    ))}
+                                </ul>
+                            )}
                         </Card>
                         <Card className="p-4">
                             <h4 className="mb-2 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Testimonial</h4>
-                            <p className="text-sm text-slate-700">“Binnen 8 weken zagen we –35% doorlooptijd en betere klanttevredenheid.”</p>
+                            <p className="text-sm text-slate-700">{uc.testimonial || '“Binnen 8 weken zagen we –35% doorlooptijd en betere klanttevredenheid.”'}</p>
                         </Card>
                     </aside>
                 </div>
