@@ -24,9 +24,15 @@ export default function UseCaseCard({ useCase, className = '' }) {
                     <h3 className="mb-2 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>{useCase.name}</h3>
                     <p className="mb-3 text-sm text-slate-700">{useCase.blurb}</p>
                     <div className="mt-auto">
-                        <div className="mb-3 flex flex-wrap gap-2">
-                            {useCase.outcome.map((o, i) => (
-                                <span key={i} className="rounded-full border border-secondary px-2 py-0.5 text-xs text-slate-600">{o}</span>
+                        <div className="mb-3 flex flex-wrap items-center gap-3">
+                            {(useCase.stackLogos || []).map((logo, i) => (
+                                <img
+                                    key={i}
+                                    src={`/logos/${logo}.svg`}
+                                    alt={`${logo} logo`}
+                                    className="h-6 w-auto opacity-80"
+                                    loading="lazy"
+                                />
                             ))}
                         </div>
                         <span className="inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-medium text-primary transition hover:bg-secondary">Bekijk</span>

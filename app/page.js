@@ -56,6 +56,9 @@ export default function HomePage() {
 
             <section className="py-10 bg-background">
                 <Container>
+                    <div className="flex justify-center px-[10%] mb-6">
+                        <img src="/img/piramide.png" alt="Niveaus piramide" className="w-full h-auto" />
+                    </div>
                     <div className="mb-6">
                         <h2 className="text-2xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Leer meer over de 4 niveaus van AI-automatisering</h2>
                         <p className="text-slate-600">Interactief overzicht.</p>
@@ -70,7 +73,7 @@ export default function HomePage() {
                 <Container>
                     <div className="mb-6 flex items-end justify-between">
                         <div>
-                            <h2 className="text-2xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Use‑cases</h2>
+                            <h2 className="text-2xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Use cases</h2>
                             <p className="text-slate-600">Concrete voorbeelden van impact en snelle payback.</p>
                         </div>
                         <Button variant="outline" href="/use-cases" className="whitespace-nowrap shrink-0">Bekijk alle</Button>

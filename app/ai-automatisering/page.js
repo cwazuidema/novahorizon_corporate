@@ -20,17 +20,11 @@ const copyByKey = {
 export default function AIAutomatiseringPage() {
     return (
         <main>
-            <section className="relative isolate border-b border-secondary bg-background py-12">
-                <Container className="grid gap-6">
-                    <h1 className="text-3xl md:text-5xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>
-                        AI‑automatisering: de 4 niveaus
+            <section className="relative isolate border-b border-secondary bg-cta py-10">
+                <Container className="text-center">
+                    <h1 className="mb-2 text-4xl font-semibold leading-tight md:text-6xl bg-clip-text text-transparent bg-gradient-to-br from-background to-background whitespace-pre-line" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>
+                        {"Leer over de 4 niveaus van AI‑automatisering"}
                     </h1>
-                    <p className="text-slate-700 md:w-3/4">
-                        Van prompten tot autonome agents. Hieronder zie je hoe je stapsgewijs volwassen wordt in AI‑automatisering en waar de grootste ROI per fase ligt.
-                    </p>
-                    <div>
-                        <Button href="mailto:info@novahorizon.nl" className="px-6 py-2.5">Plan adviesgesprek</Button>
-                    </div>
                 </Container>
             </section>
 

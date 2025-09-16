@@ -6,16 +6,24 @@ export const metadata = { title: 'Use‑cases — Nova Horizon' };
 
 export default function UseCasesOverviewPage() {
     return (
-        <main className="bg-background py-12">
-            <Container>
-                <h2 className="mb-2 text-2xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Use‑cases</h2>
-                <p className="mb-6 text-slate-600">Sectorfilter en uitkomst‑tags. Klik voor detail.</p>
-                <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-                    {useCaseList.map((u) => (
-                        <UseCaseCard key={u.slug} useCase={u} />
-                    ))}
-                </div>
-            </Container>
+        <main>
+            <section className="relative isolate border-b border-secondary bg-cta py-10">
+                <Container className="text-center">
+                    <h1 className="mb-2 text-4xl font-semibold leading-tight md:text-6xl bg-clip-text text-transparent bg-gradient-to-br from-background to-background whitespace-pre-line" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>
+                        {"Praatjes vullen geen gaatjes.\n\nLeer van bewezen AI‑implementaties."}
+                    </h1>
+                </Container>
+            </section>
+
+            <section className="bg-background py-12">
+                <Container>
+                    <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+                        {useCaseList.map((u) => (
+                            <UseCaseCard key={u.slug} useCase={u} />
+                        ))}
+                    </div>
+                </Container>
+            </section>
         </main>
     );
 }

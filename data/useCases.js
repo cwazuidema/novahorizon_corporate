@@ -10,7 +10,7 @@ export const useCaseList = [
         approach: 'Workflow gebouwd in n8n. Van binnenkomende lead naar persoonlijke reactie in 10 seconden.',
         impact: 'Snellere opvolging, hogere conversie op eerste reactie en consistenter merkgeluid.',
         stack: ['n8n', 'LLM promptpijplijn', 'CRM API‑koppeling', 'Logging & evaluatie'],
-        stackLogos: ['n8n', 'outlook', 'openai', 'whatsapp'],
+        stackLogos: ['outlook', 'openai', 'whatsapp', 'n8n'],
         testimonial: '“Dit is precies wat we nodig hebben!”',
         testimonialAuthor: 'David\nSenior Sales Executive\nInternationaal Verhuisbedrijf',
     },
