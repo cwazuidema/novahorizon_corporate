@@ -1,11 +1,11 @@
 export const useCaseList = [
     {
         slug: 'personalised-lead-message',
-        name: 'Van Email Lead naar Persoonlijke WhatsApp Bericht in 10 Seconden',
+        name: 'Van Email Lead naar Persoonlijk WhatsApp Bericht in 10 Seconden',
         image: '/img/nova_moving.png',
         videoUrl: 'https://www.youtube.com/watch?v=C4bRZondS1c',
         outcome: ['-40% afhandeltijd', '+20% NPS'],
-        blurb: 'Leads oppakken kost tijd, een persoonlijke reactie schrijven nog meer. Laat de AI voor ons werken!',
+        blurb: 'Leads oppakken kost tijd, een persoonlijke reactie schrijven nog meer. Laat de AI voor je werken!',
         problem: 'Leads blijven te lang liggen of krijgen generieke antwoorden waardoor conversie en NPS dalen.',
         approach: 'Workflow gebouwd in n8n. Van binnenkomende lead naar persoonlijke reactie in 10 seconden.',
         impact: 'Snellere opvolging, hogere conversie op eerste reactie en consistenter merkgeluid.',

@@ -3,6 +3,10 @@ import Card from '../../../components/Card';
 import Button from '../../../components/Button';
 import { articleList, getArticleBySlug } from '../../../data/articles';
 import { notFound } from 'next/navigation';
+import fs from 'fs';
+import path from 'path';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export async function generateStaticParams() {
     return articleList.map((a) => ({ slug: a.slug }));
@@ -11,7 +15,15 @@ export async function generateStaticParams() {
 export default function ArticlePage({ params }) {
     const article = getArticleBySlug(params.slug);
     if (!article) return notFound();
-    const mdx = `## Inleiding\n\nDit is een MDX-voorbeeld. Hier plaatsen we inzichten, grafieken en links.\n\n### Kernpunten\n- Meetbare KPI's per sprint\n- Transparantie in tooling en kosten\n- Governance & documentatie standaard inbegrepen\n\n### Conclusie\nEen pragmatische aanpak levert binnen 6–12 weken rendement.`;
+    const mdFilePath = path.join(process.cwd(), 'content', 'articles', `${article.slug}.md`);
+    let mdContent = '';
+    try {
+        if (fs.existsSync(mdFilePath)) {
+            mdContent = fs.readFileSync(mdFilePath, 'utf8');
+        }
+    } catch (e) {
+        // ignore
+    }
 
     return (
         <main className="py-10">
@@ -34,20 +46,13 @@ export default function ArticlePage({ params }) {
                             )}
                         </div>
                     </Card>
-                    <div className="prose prose-slate max-w-none">
-                        {mdx.split('\n\n').map((block, i) => {
-                            if (block.startsWith('## ')) return <h2 key={i}>{block.replace('## ', '')}</h2>;
-                            if (block.startsWith('### ')) return <h3 key={i}>{block.replace('### ', '')}</h3>;
-                            if (block.startsWith('- ')) return (
-                                <ul key={i}>
-                                    {block.split('\n').map((li, j) => (
-                                        <li key={j}>{li.replace('- ', '')}</li>
-                                    ))}
-                                </ul>
-                            );
-                            return <p key={i}>{block}</p>;
-                        })}
-                    </div>
+                    {mdContent && (
+                        <div className="prose prose-slate max-w-none">
+                            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                {mdContent}
+                            </ReactMarkdown>
+                        </div>
+                    )}
                     <div className="mt-8 flex items-center gap-3">
                         <Button href="mailto:info@novahorizon.nl">Plan adviesgesprek</Button>
                         <Button variant="outline" href="#">Deel artikel</Button>
