@@ -10,15 +10,17 @@ import StatsStrip from '../components/StatsStrip';
 import ModelBadge from '../components/ModelBadge';
 import LogoMarquee from '../components/LogoMarquee';
 import LevelsStepper from '../components/LevelsStepper';
+import Pyramid from '../components/Pyramid';
+import LevelsSection from '../components/LevelsSection';
 import { BoltIcon, ScaleIcon, ShieldCheckIcon, ChartBarIcon, MapIcon, LockClosedIcon, LockOpenIcon } from '../components/icons';
 
 export default function HomePage() {
     return (
         <main>
             <section className="relative isolate border-b border-secondary bg-cta py-16">
-                <Container className="grid items-center gap-8 md:grid-cols-2">
+                <Container className="max-w-none px-[5%] grid items-center gap-8 md:grid-cols-2">
                     <h1 className="mb-4 text-5xl font-semibold leading-tight text-center md:col-span-2 md:text-8xl bg-clip-text text-transparent bg-gradient-to-br from-background to-background" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>
-                        AI in jouw bedrijf binnen 4 weken met meetbaar resultaat of je betaalt niets.
+                        AI in jouw bedrijf<br /> binnen 4 weken<br /> met meetbaar resultaat<br /> of je betaalt niets.
                     </h1>
                     <div className="md:col-span-2">
                         {/* <p className="mb-6 w-full text-center text-slate-700 lg:w-1/2 mx-auto">
@@ -35,7 +37,7 @@ export default function HomePage() {
             </section>
 
             <section className="py-10">
-                <Container className="grid gap-6 md:grid-cols-3">
+                <Container className="max-w-none px-[5%] grid gap-6 md:grid-cols-3">
                     <Card className="p-6">
                         <MapIcon className="h-6 w-6 text-cta" />
                         <h3 className="mt-3 font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Duidelijke Roadmap</h3>
@@ -55,22 +57,19 @@ export default function HomePage() {
             </section>
 
             <section className="py-10 bg-background">
-                <Container>
-                    <div className="flex justify-center px-[10%] mb-6">
-                        <img src="/img/piramide.png" alt="Niveaus piramide" className="w-full h-auto" />
-                    </div>
+                <Container className="max-w-none px-[5%]">
                     <div className="mb-6">
                         <h2 className="text-2xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Leer meer over de 4 niveaus van AI-automatisering</h2>
                         <p className="text-slate-600">Interactief overzicht.</p>
                     </div>
                     <div className="rounded-2xl border border-secondary bg-white p-4 sm:p-6">
-                        <LevelsStepper />
+                        <LevelsSection />
                     </div>
                 </Container>
             </section>
 
             <section className="py-10 bg-background">
-                <Container>
+                <Container className="max-w-none px-[5%]">
                     <div className="mb-6 flex items-end justify-between">
                         <div>
                             <h2 className="text-2xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Use cases</h2>
@@ -87,7 +86,7 @@ export default function HomePage() {
             </section>
 
             <section className="py-10">
-                <Container>
+                <Container className="max-w-none px-[5%]">
                     <LogoMarquee />
                 </Container>
             </section>
@@ -102,7 +101,7 @@ export default function HomePage() {
 
 
             <section className="py-10 bg-background">
-                <Container>
+                <Container className="max-w-none px-[5%]">
                     <div className="mb-6 flex items-end justify-between">
                         <div>
                             <h2 className="text-2xl font-semibold text-primary" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>Artikelen</h2>

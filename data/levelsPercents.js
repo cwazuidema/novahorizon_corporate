@@ -4,5 +4,3 @@ export const levelPercents = [
     { id: 3, key: 'niveau-3', title: 'Niveau 3', human: 20, ai: 80, highlight: true },
     { id: 4, key: 'niveau-4', title: 'Niveau 4', human: 5, ai: 95 },
 ];
-
-
