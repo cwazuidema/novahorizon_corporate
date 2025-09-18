@@ -40,6 +40,25 @@ export default function LevelsSection() {
 
             {/* Right column: Stepper and text */}
             <div>
+                <div className="md:hidden mb-4">
+                    <div className="flex items-start justify-center gap-4">
+                        <div className="flex flex-col items-center">
+                            <div className="text-[10px] font-semibold uppercase tracking-wide text-slate-700">MENS</div>
+                            <div className="relative mt-2 w-5 rounded-full bg-slate-200" style={barHeightStyle} aria-label="Mens percentage" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={perc.human}>
+                                <div className="absolute bottom-0 left-0 right-0 rounded-b-full bg-slate-500 transition-all" style={{ height: `${perc.human}%` }} />
+                            </div>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                            <Pyramid />
+                        </div>
+                        <div className="flex flex-col items-center">
+                            <div className="text-[10px] font-semibold uppercase tracking-wide text-slate-700">AI</div>
+                            <div className="relative mt-2 w-5 rounded-full bg-slate-200" style={barHeightStyle} aria-label="AI percentage" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={perc.ai}>
+                                <div className="absolute bottom-0 left-0 right-0 rounded-b-full bg-cta transition-all" style={{ height: `${perc.ai}%` }} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <LevelsStepper activeIndex={activeIndex} onChange={setActiveIndex} />
             </div>
         </div>
