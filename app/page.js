@@ -20,7 +20,7 @@ export default function HomePage() {
             <section className="relative isolate border-b border-secondary bg-cta py-16">
                 <Container className="max-w-none px-[5%] grid items-center gap-8 md:grid-cols-2">
                     <h1 className="mb-4 text-5xl font-semibold leading-tight text-center md:col-span-2 md:text-8xl bg-clip-text text-transparent bg-gradient-to-br from-background to-background" style={{ fontFamily: 'var(--font-sora), var(--font-inter), ui-sans-serif' }}>
-                        AI in jouw bedrijf<br /> binnen 4 weken<br /> met meetbaar resultaat<br /> of je betaalt niets.
+                        AI in jouw bedrijf<br /> binnen 4 weken<br /> meetbaar resultaat<br /> of je betaalt niets.
                     </h1>
                     <div className="md:col-span-2">
                         {/* <p className="mb-6 w-full text-center text-slate-700 lg:w-1/2 mx-auto">
